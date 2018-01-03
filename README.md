@@ -2,12 +2,36 @@
 
 Generate random rap lyrics in the style of Austrian rapper Yung Hurn.
 
-# Features
-* Build with [Babel](https://babeljs.io). (ES6 -> ES5)
-* Test with [mocha](https://mochajs.org).
-* Cover with [istanbul](https://github.com/gotwarlost/istanbul).
-* Check with [eslint](eslint.org).
-* Deploy with [Travis](travis-ci.org).
+# Installation
+
+```
+npm install hurnjs
+```
+
+# How to use
+
+`hurn()` takes three parameters, `keyword`, `limit` and `useAll`; 
+
+- `keyword`: The response will contain the set keyword.
+- `limit`: The response will contain the number of words set with `limit`.
+- `useAll`: If `useAll` is set to `true`, the response will be generated from a text file containing more lyrics, when `false` it will use only the lyrics of the top 10 most listened tracks.
+
+```
+import hurn from 'hurn';
+
+hurn().then(response => {
+  console.log(response); // logs generated text with defaults
+});
+
+hurn('baby').then(response => {
+  console.log(response); 
+});
+
+hurn('pillen', 1000, true).then(response => {
+  console.log(response);
+});
+
+```
 
 # Commands
 - `npm run clean` - Remove `lib/` directory
