@@ -1,8 +1,16 @@
 import { assert } from 'chai';
-import awesomeFunction from '../src/awesomeModule';
+import hurn from '../src/hurn';
 
-describe('Awesome test.', () => {
-  it('should test awesome function', () => {
-    assert(awesomeFunction(1, 1) === 2, 'Not awesome :(');
+describe('Generates words', () => {
+  it('generate words with random key when no parameters are passed', () => {
+    hurn().then(response => {
+      assert(response.length > 0);
+    })
+  });
+
+  it('generate words with key passed as parameter', () => {
+    hurn('pillen').then(response => {
+      assert(response.toLowerCase().includes('pillen') === true);
+    })
   });
 });

@@ -2,7 +2,7 @@
   "name": "hurnjs",
   "version": "0.0.1",
   "description": "Lorem Ipsum generator for Yung Hurn lyrics",
-  "main": "./lib/index.js",
+  "main": "./lib/hurn.js",
   "scripts": {
     "clean": "rimraf lib",
     "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",
@@ -12,8 +12,8 @@
     "lint": "eslint src test",
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
-    "start": "node lib/index.js",
-    "start:clean": "npm run clean && npm run build && node lib/index.js"
+    "start": "node lib/hurn.js",
+    "start:clean": "npm run clean && npm run build && node lib/hurn.js"
   },
   "files": [
     "lib",
@@ -54,6 +54,7 @@
     "rimraf": "^2.5.4"
   },
   "dependencies": {
+    "chalk": "^2.3.0",
     "markov": "0.0.7"
   }
 }
