@@ -1,5 +1,5 @@
-var ex1 = require('./example1');
+const example1 = require('./example1');
 
-module.exports ={
-  ex1: ex1,
+module.exports = {
+  example1,
 };
