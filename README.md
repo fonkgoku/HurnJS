@@ -39,14 +39,14 @@ hurn('pillen', 1000, true).then(response => {
 
 
 # Commands
-- `npm run clean` - Remove `lib/` directory
-- `npm test` - Run tests
-- `npm test:watch` - You can even re-run tests on file changes!
+- `npm run clean` - Remove `lib/` directory.
+- `npm test` - Run tests.
+- `npm test:watch` - Run tests and watch for file changes.
 - `npm run cover` - Yes. You can even cover ES6 code.
 - `npm run lint` - Lint using [airbnb-config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
 - `npm run test:examples` - Runs written examples for better module understanding.
 - `npm run build` - Compiles ES6 to ES5.
-- `npm run prepublish` - Hook for npm. Do all the checks before publishing you module.
+- `npm run prepare` - Hook for npm. Do all the checks before publishing you module.
 
 # Installation
 Just clone this repo and remove `.git` folder.
