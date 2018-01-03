@@ -1,6 +1,6 @@
 {
   "name": "hurnjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lorem Ipsum generator for Yung Hurn lyrics",
   "main": "./lib/hurn.js",
   "scripts": {
@@ -11,11 +11,12 @@
     "cover": "cross-env BABEL_ENV=commonjs istanbul cover _mocha -- --compilers js:babel-register --recursive",
     "lint": "eslint src test",
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+    "prepare": "npm run clean && npm run lint && npm run test && npm run build"
   },
   "files": [
     "lib",
-    "src"
+    "src",
+    "vendor"
   ],
   "repository": {
     "type": "git",
