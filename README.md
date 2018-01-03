@@ -35,17 +35,17 @@ hurn('pillen', 1000, true).then(response => {
 
 ## Example response
 
-> ich Wenn fahr willst? durch du die hast Nacht, mich und fragt: ich Er sag': Nein! Baby, no, Du Nein! mit Nein! mein sag': Blackberry ich Und und ich Nacht chill' der Stoli in in bin dein'n ich Popo Nein! „Baby, sag': ja, ich ja bin ich gehen sag': nicht Baby, kann ja, Keiner Bitte, klopfen Baby, Herz Ja, mein ich mit sag': du Baby, Körper ja, mein du Körper glitzerst mein Wie Und Eis dich Oh, für „Baby, nur: wenn is Du Pferd willst, das mach' und schnell, Nein! schnell sag': deine ich Freunde was verkaufen bisschen jetzt ah,
+> Drogen jetzt? verkaufen Freunde Deine crazy mich nenn' Baby, Schluck der ein' Hand wie und glitzerst ich du hab' Brudi, noch glaubs paar wirklich Karten schnell, für schnell dich schnell, wenn Aber du nie, willst, das dann und Werd' Stadt Ich die ich weiß mach' sind die Schuhe
 
 
 # Commands
 - `npm run clean` - Remove `lib/` directory
-- `npm test` - Run tests. Tests can be written with ES6 (WOW!)
+- `npm test` - Run tests
 - `npm test:watch` - You can even re-run tests on file changes!
 - `npm run cover` - Yes. You can even cover ES6 code.
-- `npm run lint` - We recommend using [airbnb-config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb). It's fantastic.
-- `npm run test:examples` - We recommend writing examples on pure JS for better understanding module usage.
-- `npm run build` - Do some magic with ES6 to create ES5 code.
+- `npm run lint` - Lint using [airbnb-config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+- `npm run test:examples` - Runs written examples for better module understanding.
+- `npm run build` - Compiles ES6 to ES5.
 - `npm run prepublish` - Hook for npm. Do all the checks before publishing you module.
 
 # Installation
