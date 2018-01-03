@@ -17,7 +17,7 @@ npm install hurnjs
 - **useAll** (Boolean, default: *false*): If `useAll` is set to `true`, the response will be generated from a text file containing more lyrics, when `false` it will use only the lyrics of the top 10 most listened tracks.
 
 ```
-import hurn from 'hurn';
+const hurn = require('hurnjs');
 
 hurn().then(response => {
   console.log(response); // response contains text according to defaults
