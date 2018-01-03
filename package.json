@@ -1,6 +1,6 @@
 {
   "name": "hurnjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lorem Ipsum generator for Yung Hurn lyrics",
   "main": "./lib/hurn.js",
   "scripts": {
