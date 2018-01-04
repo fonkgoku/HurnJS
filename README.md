@@ -10,7 +10,7 @@ npm install hurnjs
 
 # How to use
 
-`hurn()` takes up to three parameters, `keyword`, `limit` and `useAll`; 
+`hurn()` takes up to three parameters, `keyword`, `limit` and `useAll` and returns a promise resolving with a string.
 
 - **keyword** (String, default: *random*): The response will contain the set keyword.
 - **limit** (Number, default: *100*): The response will contain the number of words set with `limit`.
@@ -48,6 +48,4 @@ hurn('pillen', 1000, true).then(response => {
 - `npm run build` - Compiles ES6 to ES5.
 - `npm run prepare` - Hook for npm. Do all the checks before publishing you module.
 
-# Installation
-Just clone this repo and remove `.git` folder.
 
