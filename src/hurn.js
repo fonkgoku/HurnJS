@@ -7,7 +7,7 @@ const hurn = (keyword, limit, useAll = false) => {
   const options = {
     seed: useAll ? 'all' : 'topTen',
     limit: limit || 100,
-    key: keyword || false,
+    key: keyword || null,
   };
 
   const seedLibrary = {
@@ -17,10 +17,16 @@ const hurn = (keyword, limit, useAll = false) => {
 
   const stream = fs.createReadStream(`${__dirname}/../vendor/${seedLibrary[options.seed]}`);
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     m.seed(stream, () => {
+      // if no key is set, use random key
       const startKey = options.key || m.pick();
-      resolve(m.fill(startKey, options.limit).join(' '));
+      // if key doesn't exist in model, reject with error message
+      if (m.search(startKey)) {
+        resolve(m.fill(startKey, options.limit).join(' '));
+      } else {
+        reject(new Error('Key not found.'));
+      }
     });
   });
 };
