@@ -1,16 +1,21 @@
-import { assert } from 'chai';
 import hurn from '../src/hurn';
 
-describe('Generates words', () => {
-  it('generate words with random key when no parameters are passed', () => {
-    hurn().then(response => {
-      assert(response.length > 0);
-    })
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
+
+chai.should();
+chai.use(chaiAsPromised);
+
+describe('Response contains', () => {
+  it('generated words with random key when no parameters are passed', () => {
+    return hurn().should.eventually.be.a('string');
   });
 
-  it('generate words with key passed as parameter', () => {
-    hurn('pillen').then(response => {
-      assert(response.toLowerCase().includes('pillen') === true);
-    })
+  it('generated words with key passed as parameter', () => {
+    return hurn('stoli').should.eventually.be.a('string').that.includes('Stoli');
+  });
+
+  it('"Key not found" when set key isn\'t available', () => {
+    return hurn('foobar').should.eventually.be.rejectedWith(Error);
   });
 });
